@@ -43,4 +43,12 @@ class Round
   def percent_correct_by_category(by_category)
     (number_correct_by_category(by_category).to_f / @deck.cards_in_category(by_category).count) * 100
   end
+
+  def all_card_categories
+    card_categories = []
+    @deck.cards.each do |card|
+      card_categories << card.category
+    end
+    card_categories.uniq
+  end
 end
