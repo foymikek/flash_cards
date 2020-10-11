@@ -31,6 +31,14 @@ class Round
     end
   end
 
+  def outro
+    puts "****** Game over! ******"
+    puts "You had #{number_correct} correct guesses out of #{deck.cards.count} for a total score of #{percent_correct}%."
+    all_card_categories.each do |category|
+      puts "#{category.to_s} - #{percent_correct_by_category(category)}% correct"
+    end
+  end
+
   def current_card
     @deck.cards[@turns.count]
   end
