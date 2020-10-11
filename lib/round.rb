@@ -11,12 +11,15 @@ class Round
     @turns = []
   end
 
+<<<<<<< HEAD
   def start
     intro
     card_cycle
     outro
   end
 
+=======
+>>>>>>> 8dce6cf02febf76f1127b22c11f37f5abd63e943
   def current_card
     @deck.cards[@turns.count]
   end
