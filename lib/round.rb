@@ -22,6 +22,15 @@ class Round
     puts "-------------------------------------------------"
   end
 
+  def card_cycle
+    until deck.cards.count == @turns.count
+      puts "This is card number #{@turns.count + 1} out of #{deck.count}."
+      puts "Questions: #{current_card.question}"
+      guess_string = gets.chomp
+      puts take_turn(guess_string).feedback
+    end
+  end
+
   def current_card
     @deck.cards[@turns.count]
   end
