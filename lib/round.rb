@@ -20,4 +20,12 @@ class Round
     @turns << new_turn
     @turns.last
   end
+
+  def number_correct
+    number_correct = 0
+    @turns.each do |turn|
+      number_correct += 1 if turn.feedback == 'Correct!'
+    end
+    number_correct
+  end
 end
