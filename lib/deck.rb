@@ -11,4 +11,10 @@ class Deck
     @cards.count
   end
 
+  def cards_in_category(card_category)
+    @cards.select do |card|
+      card.category == card_category
+    end
+  end
+
 end
