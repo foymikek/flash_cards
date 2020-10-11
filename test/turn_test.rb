@@ -30,8 +30,7 @@ class TurnTest < Minitest::Test
     assert_equal card, turn.card
     assert_equal "Saturn", turn.guess
     assert_equal false, turn.correct?
-    assert_equal "Incorrect", turn.feedback
-    # require "pry"; binding.pry
+    assert_equal "Incorrect.", turn.feedback
   end
 
 end
